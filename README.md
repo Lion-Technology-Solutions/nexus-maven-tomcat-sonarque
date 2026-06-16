@@ -41,6 +41,12 @@ cd ../ansible
 ansible-playbook playbook.yml
 ```
 
+If a previous run created a root-owned Ansible temp directory and you see an unreachable error for `/tmp/.ansible/tmp`, rerun after pulling the latest code. The project now uses `/tmp/ansible-ubuntu/tmp`. If the host still has a locked temp path, remove the old directory once:
+
+```bash
+ssh -i ~/.ssh/rancher0529.pem ubuntu@SERVER_PUBLIC_IP 'sudo rm -rf /tmp/.ansible'
+```
+
 ## Default URLs
 
 Terraform prints service URLs after apply:
