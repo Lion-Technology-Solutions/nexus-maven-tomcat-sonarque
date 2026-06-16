@@ -13,6 +13,22 @@
     system: true
     create_home: false
 
+- name: Ensure Nexus installation parent directory exists
+  ansible.builtin.file:
+    path: "{{ nexus_install_parent }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Ensure Nexus work directory exists
+  ansible.builtin.file:
+    path: "{{ nexus_work_dir }}"
+    state: directory
+    owner: "{{ nexus_user }}"
+    group: "{{ nexus_group }}"
+    mode: "0755"
+
 - name: Download Nexus Repository archive
   ansible.builtin.get_url:
     url: "{{ nexus_download_url }}"
