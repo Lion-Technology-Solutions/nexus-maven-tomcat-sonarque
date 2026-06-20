@@ -5,7 +5,7 @@ tomcat_service_name: tomcat10
 tomcat_port: 8080
 tomcat_user_file: /etc/tomcat10/tomcat-users.xml
 tomcat_admin_user: admin
-tomcat_admin_password: "Admin123"
+tomcat_admin_password: "admin123"
 tomcat_script_user: deployer
 tomcat_script_password: "ChangeMeTomcatDeploy123!"
 maven_package: maven

@@ -4,12 +4,14 @@
               xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
               version="1.0">
   <role rolename="admin-gui"/>
+  <role rolename="admin-script"/>
   <role rolename="manager-status"/>
   <role rolename="manager-gui"/>
   <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
   <user username="{{ tomcat_admin_user }}"
         password="{{ tomcat_admin_password }}"
-        roles="admin-gui,manager-gui,manager-status"/>
+        roles="admin-gui,admin-script,manager-gui,manager-script,manager-jmx,manager-status"/>
   <user username="{{ tomcat_script_user }}"
         password="{{ tomcat_script_password }}"
         roles="manager-script,manager-status"/>
