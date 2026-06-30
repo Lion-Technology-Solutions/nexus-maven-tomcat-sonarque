@@ -61,19 +61,19 @@ variable "service_allowed_cidr" {
 variable "nexus_instance_type" {
   description = "EC2 instance type for Nexus."
   type        = string
-  default     = "t3.medium"
+  default     = "m7i-flex.large"
 }
 
 variable "sonarqube_instance_type" {
   description = "EC2 instance type for SonarQube."
   type        = string
-  default     = "t3.medium"
+  default     = "m7i-flex.large"
 }
 
 variable "tomcat_maven_instance_type" {
   description = "EC2 instance type for Tomcat and Maven."
   type        = string
-  default     = "t3.small"
+  default     = "m7i-flex.large"
 }
 
 variable "nexus_root_volume_size" {
